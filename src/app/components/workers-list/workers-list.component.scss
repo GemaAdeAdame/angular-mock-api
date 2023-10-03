@@ -1,0 +1,12 @@
+.workers {
+    display: flex;
+    justify-content: space-between;
+  
+    &__list {
+      width: 50%;
+    }
+  
+    &__form {
+      width: 45%;
+    }
+  }

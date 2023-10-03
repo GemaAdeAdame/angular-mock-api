@@ -1,0 +1,14 @@
+<div *ngIf="worker" class="worker">
+    <div class="worker__main">
+      <div class="worker__info">
+        <img class="worker__img" [src]="worker.avatar">
+        <p class="worker__name">{{ worker.name }}</p>
+      </div>
+      <button class="worker__button" (click)="deleteWorker()">Eliminar</button>
+    </div>
+    <div class="worker__details">
+      <p class="worker__job">Job: {{ worker.job }}</p>
+      <p class="worker__address">Address: {{ worker.address }}</p>
+    </div>
+  </div>
+  

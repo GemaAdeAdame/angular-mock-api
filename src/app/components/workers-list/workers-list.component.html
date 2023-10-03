@@ -1,0 +1,19 @@
+<p>workers-list works!</p>
+<div
+  *ngIf="(workers$ | async) as workers"
+  class="workers"
+>
+  <div
+    class="workers__list"
+  >
+    <app-worker
+      *ngFor="let worker of workers"
+      [worker]="worker"
+      (deleteWorkerChange)="onDeleteWorker(worker.id)"
+    ></app-worker>
+  </div>
+  <app-new-worker
+    class="workers__form"
+    (addWorkerChange)="getWorkers()"
+  ></app-new-worker>
+</div>
